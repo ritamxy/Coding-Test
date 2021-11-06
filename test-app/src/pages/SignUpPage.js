@@ -1,4 +1,12 @@
+import React, { useState } from "react";
+
 function SignUpPage() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  function togglePasswordVisiblity() {
+    setShowPassword(showPassword ? false : true);
+  }
+
   return (
     <div>
       <form>
@@ -9,8 +17,18 @@ function SignUpPage() {
         <br />
         <label>
           Password:
-          <input type="password" name="psw" placeholder="Password" />
+          <input
+            type={showPassword ? "text" : "password"}
+            name="psw"
+            placeholder="Password"
+          />
         </label>
+        Show Password
+        <input
+          onClick={togglePasswordVisiblity}
+          type="checkbox"
+          name="showpsw"
+        ></input>
         <br />
         <label>
           First Name:
@@ -34,7 +52,7 @@ function SignUpPage() {
         <br />
         <label>
           Phone:
-          <input type="text" name="address" />
+          <input type="text" name="phone" />
         </label>
         <br />
         <br />
