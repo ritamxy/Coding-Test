@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
 
-  function togglePasswordVisiblity() {
+  function togglePasswordVisibility() {
     setShowPassword(showPassword ? false : true);
   }
 
@@ -25,7 +25,7 @@ function SignUpPage() {
         </label>
         Show Password
         <input
-          onClick={togglePasswordVisiblity}
+          onClick={togglePasswordVisibility}
           type="checkbox"
           name="showpsw"
         ></input>
