@@ -30,9 +30,9 @@ The users can create accounts by clicking the `sign up` button if the required f
 - address
 - phone
 
-## InternalPage
+## Internal Page
 
-It is a display page after users sign In successfully.
+It is a display page after users sign in successfully.
 
 ## Toggle password visibility
 
