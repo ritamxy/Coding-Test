@@ -1,7 +1,7 @@
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import LandingPage from "./pages/LandingPage";
-import DataPage from "./pages/DataPage";
+import InternalPage from "./pages/InternalPage";
 import ReactGA from "react-ga";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/datapage" element={<DataPage />} />
+          <Route path="/internalpage" element={<InternalPage />} />
           <Route
             path="/login"
             element={<LoginPage eventTrack={eventTrack} />}

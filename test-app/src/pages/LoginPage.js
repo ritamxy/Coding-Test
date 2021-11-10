@@ -13,7 +13,7 @@ function LoginPage(props) {
 
   function checkInfo() {
     if (username === "rita123" && password === "66666") {
-      navigate("/datapage");
+      navigate("/internalpage");
     } else {
       alert("oops, username or password is wrong");
     }
