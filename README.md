@@ -1,28 +1,43 @@
 # Coding-Test
 
-This web application builds four pages, including "LandingPage", "LoginPage", "SignUpPage" and "InternalPage"
+This web application is built using [React](https://reactjs.org) which supports the following user stories
 
-# LandingPage
+1. Users can signup /signin with their email.
+2. Users can have a button to toggle password visibility
+3. Internal users can view the tracked events/pageview from Google Analytics
+4. Internal users can view the tracked events/pageview from Mixpanel\* (to be done)
 
-The "LandingPage" is the home page of this web, and it guides to "LoginPage" and "SignUpPage"
+The test website includes four pages: **Landing Page**, **Login Page**, **Sign Up Page** and **Internal Page**.
 
-# LoginPage
+## Landing Page
 
-The "LoginPage" provides Login function for users who already have account, so they can log into the "InternalPage" by clicking 'login' button if they enter correct username and passowrd.
-Users who do not have accounts can simply click 'signup' button and then jump to "SignUpPage" to create an account.
+This is the home page and it basically contains two links which guide users redirect to **Login Page** and **Sign Up Page**.
 
-# SignUpPage
+## Login Page
 
-The "SignUpPage" can create accounts for users once they fufill required blanks (including: username, password, first name, last name, gender, address and phone), and then click the 'Sign Up' button.
+This page is for users who already have accounts. They will redirect to the **Internal Page** by clicking the `login` button, only if they enter the correct username and password.
+Users who do not have accounts can simply click the `sign up` button and then navigate to **Sign Up Page** to create an account.
 
-# InternalPage
+## Sign Up Page
 
-It is a display page after users signed In successfully.
+The users can create accounts by clicking the `sign up` button if the required fields are fulfilled, including:
 
-# Toggle password visibility
+- username
+- password
+- first name
+- last name
+- gender
+- address
+- phone
 
-This function is applies in "LoginPage" and "SignUpPage". Users can tick/untick the checkbox called 'Show Password' to see visible/invisible password.
+## InternalPage
 
-# Tracking event - Google Analytics
+It is a display page after users sign In successfully.
 
-The 'Sign Up' button of "LoginPage" is linked to Google Analytics for tracking event.
+## Toggle password visibility
+
+This functionality applies to **Login Page** and **Sign Up Page**. Users can tick/untick the checkbox called `Show Password` to see visible/invisible passwords.
+
+## Tracking event - Google Analytics
+
+The `Sign Up` button of **Login Page** is linked to Google Analytics for tracking events.
