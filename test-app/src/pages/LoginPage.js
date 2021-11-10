@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-function LoginPage() {
+function LoginPage(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showpassword, setShowPassword] = useState("");
@@ -44,7 +44,14 @@ function LoginPage() {
         <button type="submit" onClick={checkInfo}>
           Login
         </button>
-        <button>
+        <button
+          onClick={props.eventTrack.bind(
+            this,
+            "Sign Up Page",
+            "Sign Up Button",
+            "Button"
+          )}
+        >
           <Link to="/signup">Sign Up</Link>
         </button>
         <br />

@@ -2,8 +2,24 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import LandingPage from "./pages/LandingPage";
 import DataPage from "./pages/DataPage";
+import ReactGA from "react-ga";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+
+ReactGA.initialize("UA-212171696-1");
+
+ReactGA.set({
+  username: localStorage.getItem("userName"),
+});
+
+const eventTrack = (category, action, label) => {
+  console.log("GA event:", category, ":", action, ":", label);
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
 
 function App() {
   return (
@@ -11,7 +27,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/datapage" element={<DataPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/login"
+            element={<LoginPage eventTrack={eventTrack} />}
+          />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
